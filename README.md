@@ -5,7 +5,6 @@ This repository contains self projects of the book "The Elements Of Statistical 
 
 ### Study Overview
 This project presents an analysis of the Coronary Risk-Factor Study (CORIS) dataset, examining heart disease risk factors in rural Western Cape, South Africa.
-Dataset Description
 
 Study population: White males aged 15-64 years
 Sample size: 462 subjects (160 cases, 302 controls)
