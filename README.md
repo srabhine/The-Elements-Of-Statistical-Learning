@@ -1,6 +1,15 @@
 # The-Elements-Of-Statistical-Learning
 This repository contains self projects of the book "The Elements Of Statistical Learning"
 
+## Content Description
+
+- **Exercices/**: Contains organized practice exercises and their solutions from the book
+- **south_afr_dataset/**: Dataset for heart disease analysis in South African population
+- **vowel_dataset/**: Contains training and test data for vowel recognition problems
+- **Code_Exercice_3_2.ipynb**: Implementation and solution of Exercise 3.2 from the book
+- **south_african_heart_disease.ipynb**: Comprehensive analysis of heart disease factors
+- **vowel.ipynb**: Implementation of vowel recognition algorithms
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # South African Heart Disease Analysis Project
