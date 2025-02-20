@@ -4,9 +4,10 @@ This repository contains self projects of the book "The Elements Of Statistical 
 ## Content Description
 
 - **Exercices/**: Contains organized practice exercises and their solutions from the book
-- **south_afr_dataset/**: Dataset for heart disease analysis in South African population
+- **south_afr_dataset/**: Heart disease analysis in South African population
 - **vowel_dataset/**: Contains training and test data for vowel recognition problems
 - **Code_Exercice_3_2.ipynb**: Implementation and solution of Exercise 3.2 from the book
+- **prostate_cancer.ipynb**: Regression task for the prostate_cancer dataset
 - **south_african_heart_disease.ipynb**: Comprehensive analysis of heart disease factors
 - **vowel.ipynb**: Implementation of vowel recognition algorithms
 
@@ -82,6 +83,97 @@ This project analyzes data from the Coronary Risk-Factor Study (CORIS) baseline 
 
 ## Conclusions
 The analysis successfully identified key risk factors for heart disease in the study population while demonstrating the importance of using multiple modeling approaches to understand complex relationships between variables. The combination of traditional statistical methods with modern machine learning techniques provided robust and interpretable results.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Prostate Cancer Analysis Project
+
+## Overview
+This project analyzes data from a study by Stamey et al. (1989) examining the correlation between prostate specific antigen (PSA) levels and various clinical measurements in men scheduled for radical prostatectomy. The main goal is to predict the log of PSA (lpsa) using multiple clinical measurements.
+
+## Dataset
+- **Population**: Men scheduled for radical prostatectomy
+- **Sample Size**: 97 subjects
+- **Target Variable**: Log of prostate specific antigen (lpsa)
+- **Study Type**: Supervised learning (regression)
+
+### Features
+- Log cancer volume (lcavol)
+- Log prostate weight (lweight)
+- Age
+- Log of benign prostatic hyperplasia amount (lbph)
+- Seminal vesicle invasion (svi)
+- Log of capsular penetration (lcp)
+- Gleason score
+- Percent of Gleason scores 4 or 5 (pgg45)
+
+## Methods & Techniques
+
+### 1. Base Models
+- Least Squares Regression
+- Base Error Rate Analysis using DummyRegressor
+- Cross-validation with one-standard-error rule
+
+### 2. Advanced Regression Methods
+- Ridge Regression
+- Lasso Regression
+- Principal Components Regression (PCR)
+- Partial Least Squares (PLS)
+- Best Subset Regression
+
+### 3. Feature Selection and Regularization
+- Standardization of predictors
+- Cross-validated parameter selection
+- Shrinkage methods comparison
+- Forward Stagewise Regression
+
+### 4. Visualization Techniques
+- Scatterplot matrices
+- Correlation matrices
+- Coefficient profile plots
+- Error rate comparisons
+
+## Key Findings
+
+1. **Model Performance**
+   - Base Error Rate: 1.057
+   - Least Squares Test Error: 0.521
+   - PCR achieved best performance with test error of 0.449
+   - Lasso showed strong feature selection capabilities
+
+2. **Feature Importance**
+   - Strong correlations between lcavol, lcp and the response lpsa
+   - Significant relationships between svi and several predictors
+   - Some predictors show high correlation (e.g., gleason and pgg45)
+
+3. **Model Comparisons**
+   - Ridge Regression effectively handled correlated predictors
+   - Lasso provided sparse solutions
+   - PCR showed advantage in handling multicollinearity
+   - PLS performed similarly to other methods
+
+## Technical Implementation
+- Programming Language: Python
+- Key Libraries:
+  - scikit-learn for modeling
+  - statsmodels for statistical analysis
+  - seaborn for visualization
+  - numpy and pandas for data manipulation
+  - matplotlib for custom plotting
+
+## Comparative Analysis of Methods
+Results from different methods (coefficients):
+- Least Squares captured all relationships but may overfit
+- Best Subset selected fewer variables
+- Ridge showed shrinkage while keeping all variables
+- Lasso produced sparse solutions
+- PCR and PLS provided alternative approaches to handling correlation
+
+## Conclusions
+The analysis demonstrates the effectiveness of various regression techniques in predicting PSA levels. PCR showed the best test performance, while different methods offered various trade-offs between interpretability, sparsity, and prediction accuracy. The study highlights the importance of considering multiple modeling approaches for medical prediction tasks.
+
+
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
